@@ -1,0 +1,104 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            robotArm.speed = 150;
+            
+            // Het level inladen
+            robotArm.loadLevel("exercise 9");
+            // robotArm.randomLevel(1);
+
+            // Jou instructies volgen hier
+            var vierkant = 0;
+            var vierkant2 = 0;
+            var vierkant3 = 0;
+            var vierkant4 = 0;
+
+                    while(vierkant < 1 ){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        vierkant++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(vierkant2 < 2){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        vierkant2++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(vierkant3 < 3){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        vierkant3++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(vierkant4 < 4){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        vierkant4++;
+
+                    }
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+
+
+
+
+
+        </script>
+    </body>
+</html>
